@@ -50,6 +50,7 @@ public class Util {
 	 * @return converted HTML
 	 */
 	public static String convertHtmlTags(String html) {
+		if (true)
 		// Handle <code>
 		html = html.replaceAll("<code>", "<tt>").replaceAll("</code>", "</tt>");
 		
@@ -76,6 +77,7 @@ public class Util {
 		// ANDROID BUG: http://code.google.com/p/android/issues/detail?id=3473
 		html = html.replaceAll("<strong>", "<b>").replaceAll("</strong>", "</b>")
 		           .replaceAll("<em>", "<i>").replaceAll("</em>", "</i>");
+		
 		
 		return html;
 	}

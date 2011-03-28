@@ -815,7 +815,6 @@ public class CommentsListActivity extends ListActivity
     	
     	private void parseCommentsJSON(InputStream in)
 				throws IOException, JsonParseException, IllegalStateException {
-			
 			String genericListingError = "Not a comments listing";
 			try {
 				Listing[] listings = mObjectMapper.readValue(in, Listing[].class);

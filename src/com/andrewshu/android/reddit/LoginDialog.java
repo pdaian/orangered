@@ -23,7 +23,7 @@ public abstract class LoginDialog extends Dialog {
 		mSettings = settings;
 		
 		setContentView(R.layout.login_dialog);
-		setTitle("Login to reddit.com");
+		setTitle("Login");
 		if (finishActivityIfCanceled) {
 			// If user presses "back" then quit.
 			setOnCancelListener(new OnCancelListener() {

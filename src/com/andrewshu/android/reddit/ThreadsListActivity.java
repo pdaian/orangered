@@ -168,9 +168,9 @@ public final class ThreadsListActivity extends ListActivity {
 		    	// Orientation change. Use prior instance.
 		    	resetUI(new ThreadsListAdapter(this, mThreadsList));
 		    	if (Constants.FRONTPAGE_STRING.equals(mSubreddit))
-		    		setTitle("reddit.com: what's new online!");
+		    		setTitle("reddit: the voice of the internet -- news before it happens");
 		    	else
-		    		setTitle("/r/" + mSubreddit.trim());
+		    		setTitle("r/" + mSubreddit.trim());
 		    }
         }
 		// Handle subreddit Uri passed via Intent
@@ -509,19 +509,8 @@ public final class ThreadsListActivity extends ListActivity {
 			voteDownButton.setOnCheckedChangeListener(null);
 			
 			// Set initial states of the vote buttons based on user's past actions
-    		if (thingInfo.getLikes() == null) {
-    			// User is currently neutral
-    			voteUpButton.setChecked(false);
-    			voteDownButton.setChecked(false);
-    		} else if (thingInfo.getLikes() == true) {
-    			// User currenty likes it
-    			voteUpButton.setChecked(true);
-    			voteDownButton.setChecked(false);
-    		} else {
-    			// User currently dislikes it
-    			voteUpButton.setChecked(false);
-    			voteDownButton.setChecked(true);
-    		}
+    		voteUpButton.setChecked(thingInfo.getLikes() == null ? false : thingInfo.getLikes());
+    		voteDownButton.setChecked((thingInfo.getLikes() == null || thingInfo.getLikes() == true) ? false : true);
     		voteUpButton.setOnCheckedChangeListener(
     				threadClickDialogOnClickListenerFactory.getVoteUpOnCheckedChangeListener(thingInfo));
     		voteDownButton.setOnCheckedChangeListener(
@@ -536,8 +525,7 @@ public final class ThreadsListActivity extends ListActivity {
 
 		// "link" button behaves differently for regular links vs. self posts and links to comments pages (e.g., bestof)
         if (thingInfo.isIs_self()) {
-        	// It's a self post. Both buttons do the same thing.
-        	linkButton.setEnabled(false);
+        	linkButton.setVisibility(View.GONE);
         } else {
         	linkButton.setOnClickListener(
         			threadClickDialogOnClickListenerFactory.getLinkOnClickListener(thingInfo, settings.useExternalBrowser));
@@ -701,9 +689,9 @@ public final class ThreadsListActivity extends ListActivity {
     		}
     		
 	    	if (Constants.FRONTPAGE_STRING.equals(mSubreddit))
-	    		setTitle("reddit.com: what's new online!");
+	    		setTitle("reddit: the voice of the internet -- news before it happens");
 	    	else
-	    		setTitle("/r/" + mSubreddit.trim());
+	    		setTitle("r/" + mSubreddit.trim());
     	}
     	
     	@Override

@@ -48,7 +48,6 @@ public class RedditSettings {
 	boolean showCommentGuideLines = true;
 	boolean confirmQuit = true;
 	boolean alwaysShowNextPrevious = true;
-	
 	int threadDownloadLimit = Constants.DEFAULT_THREAD_DOWNLOAD_LIMIT;
 	String commentsSortByUrl = Constants.CommentsSort.SORT_BY_BEST_URL;
 	

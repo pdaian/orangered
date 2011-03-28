@@ -38,12 +38,16 @@ public class CommentManager {
 	 * @param bodyHtml escaped HTML (like in reddit Thing's body_html)
 	 * @return
 	 */
-    public CharSequence createSpanned(String bodyHtml) {
+    public CharSequence createSpanned(String bodyHtml, String subreddit) {
     	try {
     		// get unescaped HTML
     		bodyHtml = Html.fromHtml(bodyHtml).toString();
     		// fromHtml doesn't support all HTML tags. convert <code> and <pre>
     		bodyHtml = Util.convertHtmlTags(bodyHtml);
+    		if (bodyHtml.contains("<a href=\"/")) {
+    			bodyHtml="fuck";
+    		}
+    		
     		
     		Spanned body = Html.fromHtml(bodyHtml);
     		// remove last 2 newline characters
@@ -95,7 +99,7 @@ public class CommentManager {
     		public void run() {
     			if (indeterminateProgressBar != null && activity != null)
     				activity.runOnUiThread(progressBarShow);
-    			CharSequence spanned = createSpanned(bodyHtml);
+    			CharSequence spanned = createSpanned(bodyHtml, thingInfo.getSubreddit());
     			Message message = handler.obtainMessage(1, spanned);
     			handler.sendMessage(message);
     		}
