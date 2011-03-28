@@ -1,8 +1,10 @@
 reddit is fun
 =============
 
-Android app to read reddit.com.
+Android app to read reddit.com.  Forked by pdaian (AlLnAtuRalX) to compete with new reddit apps.
+Complete rewrite and redesign planned.
 
+Current code by Philip Daian (AlLnAtuRalX).  GPLv3
 Original code by Andrew Shu (talklittle). [Licensed under GPLv3][license].
 
 Contributors:
@@ -26,19 +28,4 @@ Contributors:
 * wac-
 * pakesson
 
-Android Market QR Codes
-----------------
-
-Free
-
-![reddit is fun QR
-Code](http://chart.apis.google.com/chart?cht=qr&chs=120x120&chl=market%3A%2F%2Fdetails%3Fid%3Dcom.andrewshu.android.reddit
- "Scan with a QR Code reader")
-
-$1.99 Widgets version
-
-![reddit is fun donation QR
-Code](http://chart.apis.google.com/chart?cht=qr&chs=120x120&chl=market%3A%2F%2Fdetails%3Fid%3Dcom.andrewshu.android.redditdonation
-"Scan with a QR Code reader; $1.99 Widgets version")
-
-[license]: http://github.com/talklittle/reddit-is-fun/blob/master/COPYING
+Android Market info coming soon.  Alpha planned for April 11.
