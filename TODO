@@ -1,0 +1,28 @@
+-- Features --
+
+Subreddit Pinned Items
+Spoilers
+Embedded images with alt text, at least in r/ffffffuuuuuu
+Quick Previews - Readability API??!??!?!?!
+Increase scrolling performance on comment threads
+Search (Low Priority)
+
+-- Redesign --
+
+More compact front page
+Remove ups/downs from comment threads
+Adjust light theme bg to be slightly easier
+Thicken comment guidelines
+
+-- Bugs --
+
+Reload Profile Goes to Own Profile
+
+MAJOR:
+Seems like the listener is not being removed fast enough, so will sometimes jump around when you try to scroll.
+Maybe instead of the onKeyDown and onTouch, need the CommentsListView overriding onScrollListener()?
+
+
+Key: 
+* = Finished
+** = Rejected
