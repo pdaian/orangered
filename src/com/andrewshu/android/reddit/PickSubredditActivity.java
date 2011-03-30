@@ -98,7 +98,7 @@ public final class PickSubredditActivity extends ListActivity {
     	"entertainment",
     	"bestof",
     	"economics",
-    	"marijuana",
+    	"trees",
     	"todayilearned",
     	"linux",
     	"android"
