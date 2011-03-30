@@ -2137,14 +2137,10 @@ public class CommentsListActivity extends ListActivity
 	    			// User is currently neutral
 	    			voteUpButton.setChecked(false);
 	    			voteDownButton.setChecked(false);
-	    		} else if (likes == true) {
-	    			// User currenty likes it
-	    			voteUpButton.setChecked(true);
-	    			voteDownButton.setChecked(false);
-	    		} else {
-	    			// User currently dislikes it
-	    			voteUpButton.setChecked(false);
-	    			voteDownButton.setChecked(true);
+	    		}
+	    		else {
+	    			voteUpButton.setChecked(likes);
+	    			voteDownButton.setChecked(!likes);
 	    		}
 	    		// Now we want the user to be able to vote.
 	    		voteUpButton.setOnCheckedChangeListener(voteUpOnCheckedChangeListener);
@@ -2299,19 +2295,8 @@ public class CommentsListActivity extends ListActivity
         else if (settings.isLoggedIn()) {
         	voteUpView.setVisibility(View.VISIBLE);
         	voteDownView.setVisibility(View.VISIBLE);
-        	if (item.getLikes() == null) {
-        		voteUpView.setImageResource(R.drawable.vote_up_gray);
-        		voteDownView.setImageResource(R.drawable.vote_down_gray);
-//        		votesView.setTextColor(res.getColor(R.color.gray));
-        	} else if (item.getLikes() == true) {
-        		voteUpView.setImageResource(R.drawable.vote_up_red);
-        		voteDownView.setImageResource(R.drawable.vote_down_gray);
-//        		votesView.setTextColor(res.getColor(R.color.arrow_red));
-        	} else {
-        		voteUpView.setImageResource(R.drawable.vote_up_gray);
-        		voteDownView.setImageResource(R.drawable.vote_down_blue);
-//        		votesView.setTextColor(res.getColor(R.color.arrow_blue));
-        	}
+        	voteUpView.setImageResource((item.getLikes() == null || !item.getLikes()) ? R.drawable.vote_up_gray : R.drawable.vote_up_red);
+        	voteDownView.setImageResource((item.getLikes() == null || item.getLikes()) ? R.drawable.vote_down_gray : R.drawable.vote_down_blue);
         } else {
         	voteUpView.setVisibility(View.VISIBLE);
         	voteDownView.setVisibility(View.VISIBLE);
