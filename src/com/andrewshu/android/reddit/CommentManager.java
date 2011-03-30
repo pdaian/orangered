@@ -44,9 +44,6 @@ public class CommentManager {
     		bodyHtml = Html.fromHtml(bodyHtml).toString();
     		// fromHtml doesn't support all HTML tags. convert <code> and <pre>
     		bodyHtml = Util.convertHtmlTags(bodyHtml);
-    		if (bodyHtml.contains("<a href=\"/")) {
-    			bodyHtml="fuck";
-    		}
     		
     		
     		Spanned body = Html.fromHtml(bodyHtml);
