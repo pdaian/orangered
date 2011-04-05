@@ -7,12 +7,20 @@ Quick Previews - Readability API??!??!?!?!
 Increase scrolling performance on comment threads
 Search (Low Priority)
 
+** Add SD Install - REMOVED to maintain 1.6 support
+
 -- Redesign --
 
 More compact front page
+No thread up/down arrows needed on thread view.
 Remove ups/downs from comment threads
 Adjust light theme bg to be slightly easier
 Thicken comment guidelines
+Have login screen stay up on failed attempts.
+So many labels -> hints.
+
+* Picking subreddit hint added.
+* Remove links button for self posts in thread view.
 
 -- Bugs --
 

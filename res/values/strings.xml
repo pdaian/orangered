@@ -213,4 +213,6 @@
    	
 <string name="pref_load_thumbnails_only_wifi">Only on WiFi</string>
 <string name="pref_thumbnail_category">Thumbnail Settings</string>
+<string name="pin_subreddit">Pin</string>
+<string name="enter_subreddit_text">Enter a Subreddit</string>
 </resources>

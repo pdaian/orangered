@@ -41,13 +41,15 @@
 	    	android:layout_alignParentRight="true"
 	    	android:text="@string/pick_subreddit_button"
 	    	/>
+	    	
+	    	<Button android:id="@+id/pin_subreddit"
+	    	android:text="@string/pin_subreddit" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@+id/pick_subreddit_button"/>
+	    	
 	    <!-- Disable focus initially so soft keyboard doesn't pop up -->
 	    <EditText android:id="@+id/pick_subreddit_input"
-	    	android:layout_width="fill_parent"
 	    	android:layout_height="fill_parent"
-	    	android:layout_toLeftOf="@id/pick_subreddit_button"
-	    	android:focusable="false"
-	    	/>
+	    	android:layout_toLeftOf="@+id/pin_subreddit"
+	    	android:focusable="false" android:layout_width="fill_parent" android:hint="@string/enter_subreddit_text"/>
    	</RelativeLayout>
 
     <ListView android:id="@android:id/list"

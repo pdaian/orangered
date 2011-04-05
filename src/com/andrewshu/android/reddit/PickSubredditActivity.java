@@ -197,7 +197,14 @@ public final class PickSubredditActivity extends ListActivity {
 	        	}
 	        });
         }
-        
+        Button pinButton = (Button) findViewById(R.id.pin_subreddit);
+        if (pinButton != null) {
+	        pinButton.setOnClickListener(new OnClickListener() {
+	        	public void onClick(View v) {
+	        		mEt.getText().toString().trim();
+	        	}
+	        });
+        }
         getListView().requestFocus();
     }
     
