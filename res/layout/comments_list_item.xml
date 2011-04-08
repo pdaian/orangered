@@ -33,52 +33,52 @@
     
     <!-- Comment Indentation: set background color to desired line color -->
     <View android:id="@+id/left_indent1"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent2"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent3"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent4"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent5"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent6"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent7"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
     <View android:id="@+id/left_indent8"
-    	android:layout_width="1dp"
+    	android:layout_width="5dp"
     	android:layout_height="fill_parent"
     	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="4dp"
+    	android:layout_marginRight="0dp"
     	/>
 
 	<!-- Left section -->
@@ -88,23 +88,6 @@
 		android:layout_height="fill_parent"
 		android:gravity="top"
 		>
-	    <ImageView android:id="@+id/vote_up_image"
-			android:layout_width="16dip"
-			android:layout_height="8dip"
-			android:layout_marginLeft="2dip"
-			android:layout_marginRight="2dip"
-			android:layout_marginTop="4dip"
-			android:src="@drawable/vote_up_gray"
-			/>
-			
-		<ImageView android:id="@+id/vote_down_image"
-			android:layout_width="16dip"
-			android:layout_height="8dip"
-			android:layout_marginTop="2dip"
-			android:layout_marginLeft="2dip"
-			android:layout_marginRight="2dip"
-			android:src="@drawable/vote_down_gray"
-			/>
 	</LinearLayout>
     
 	<LinearLayout android:id="@+id/text_layout"
