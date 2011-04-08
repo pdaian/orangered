@@ -1,4 +1,4 @@
-reddit is fun
+Orangered Android App (Reddit Reader)
 =============
 
 Android app to read reddit.com.  Forked by pdaian (AlLnAtuRalX) to compete with new reddit apps.
