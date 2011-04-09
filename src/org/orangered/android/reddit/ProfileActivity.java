@@ -1009,7 +1009,7 @@ public final class ProfileActivity extends ListActivity
     		}
     		break;
     	case R.id.refresh_menu_id:
-			new DownloadProfileTask(mSettings.username).execute(Constants.DEFAULT_COMMENT_DOWNLOAD_LIMIT);
+			new DownloadProfileTask(mUsername).execute(Constants.DEFAULT_COMMENT_DOWNLOAD_LIMIT);
 			break;
     	}
     	
