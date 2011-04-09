@@ -1,5 +1,4 @@
-/*
- * Copyright 2009 Andrew Shu
+/* Copyright 2009 Andrew Shu
  *
  * This file is part of "reddit is fun".
  *

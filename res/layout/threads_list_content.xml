@@ -72,6 +72,8 @@
 	    android:layout_alignParentTop="true"
 	    android:layout_above="@id/next_previous_layout"
 	    android:cacheColorHint="#00000000"
+	    android:alwaysDrawnWithCache="true"
+	    android:persistentDrawingCache="all"
     	/>
 
     <ScrollView android:id="@android:id/empty"

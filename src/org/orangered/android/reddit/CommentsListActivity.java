@@ -2266,7 +2266,7 @@ public class CommentsListActivity extends ListActivity
         }
         
         try {
-        	votesView.setText(Util.showNumPoints(item.getUps() - item.getDowns()));
+        	votesView.setText(Util.showNumPoints(item.getUps() - item.getDowns())+" ("+item.getUps()+"|" + item.getDowns()+")");
         } catch (NumberFormatException e) {
         	// This happens because "ups" comes after the potentially long "replies" object,
         	// so the ListView might try to display the View before "ups" in JSON has been parsed.

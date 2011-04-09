@@ -48,24 +48,25 @@ public class BitmapManager {
 	
 	private static final String TAG = "BitmapManager";
 	
-    private Map<String, SoftReference<Bitmap>> mCache;
+    private Map<String, Bitmap> mCache;
     private DefaultHttpClient mClient = Common.getGzipHttpClient();
     
     public BitmapManager() {
-    	mCache = new HashMap<String, SoftReference<Bitmap>>();
+    	mCache = new HashMap<String,Bitmap>();
     }
 
     public Bitmap fetchBitmap(String urlString) {
-    	SoftReference<Bitmap> ref = mCache.get(urlString);
-    	if (ref != null && ref.get() != null) {
-    		return ref.get();
+    	Bitmap ref = mCache.get(urlString);
+    	if (ref != null) {
+    		if (Constants.LOGGING) Log.d(TAG, "cache success");
+    		return ref;
     	}
 
     	if (Constants.LOGGING) Log.d(TAG, "image url:" + urlString);
     	
     	try {
     		Bitmap bitmap = readBitmapFromNetwork(urlString);
-    		mCache.put(urlString, new SoftReference<Bitmap>(bitmap));
+    		mCache.put(urlString, bitmap);
 //    		if (Constants.LOGGING) Log.d(this.getClass().getSimpleName(), "got a thumbnail drawable: " + drawable.getBounds() + ", "
 //    				+ drawable.getIntrinsicHeight() + "," + drawable.getIntrinsicWidth() + ", "
 //    				+ drawable.getMinimumHeight() + "," + drawable.getMinimumWidth());
@@ -81,9 +82,9 @@ public class BitmapManager {
     }
     
     public void fetchBitmapOnThread(final String urlString, final ImageView imageView, final ProgressBar indeterminateProgressBar, final Activity act) {
-    	SoftReference<Bitmap> ref = mCache.get(urlString);
-    	if (ref != null && ref.get() != null) {
-    		imageView.setImageBitmap(ref.get());
+    	Bitmap ref = mCache.get(urlString);
+    	if (ref != null) {
+    		imageView.setImageBitmap(ref);
 	    	return;
     	}
 

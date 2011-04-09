@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login_password_label"
         android:textStyle="bold"
+        android:hint="Username"
         />
               
 	<EditText android:id="@+id/login_password_input"
@@ -49,6 +50,7 @@
 		android:layout_height="wrap_content"
 		android:maxLength="20"
 		android:password="true"
+		android:hint="Password"
 		/>
 			
 	<Button android:id="@+id/login_button"
