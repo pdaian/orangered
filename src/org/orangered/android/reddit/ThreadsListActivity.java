@@ -529,6 +529,7 @@ public final class ThreadsListActivity extends ListActivity {
         if (thingInfo.isIs_self()) {
         	linkButton.setVisibility(View.GONE);
         } else {
+        	linkButton.setVisibility(View.VISIBLE);
         	linkButton.setOnClickListener(
         			threadClickDialogOnClickListenerFactory.getLinkOnClickListener(thingInfo, settings.useExternalBrowser));
         	linkButton.setEnabled(true);
