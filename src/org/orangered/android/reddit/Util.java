@@ -152,9 +152,9 @@ public class Util {
 	
 	public static String showNumPoints(int score) {
 		if (score == 1) {
-			return "1 point";
+			return "1 pt";
 		} else {
-			return score + " points";
+			return score + " pts";
 		}
 	}
 	
